@@ -13,6 +13,7 @@
  */
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import LiveTapeTicker from './components/LiveTapeTicker';
 import HeroSection from './components/HeroSection';
@@ -100,6 +101,9 @@ export default function App() {
         selectedPlan={selectedPlan}
         onPlanChange={setSelectedPlan}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
